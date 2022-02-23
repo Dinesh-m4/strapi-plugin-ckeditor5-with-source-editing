@@ -108,6 +108,10 @@ const Wrapper = styled.div`
 `;
 
 const Editor = ({ onChange, name, value, config }) => {
+  const uploadUrl = `http://localhost:1337/upload`;
+  const headers = {
+    Authorization: "Bearer " + auth.getToken(),
+  };
   return (
     <Wrapper>
       <CKEditor
@@ -120,7 +124,12 @@ const Editor = ({ onChange, name, value, config }) => {
           const data = editor.getData();
           onChange({ target: { name, value: data } });
         }}
-        config={config}
+        config={{
+          strapiUpload: {
+            uploadUrl,
+            headers,
+          },
+        }}
       />
     </Wrapper>
   );
