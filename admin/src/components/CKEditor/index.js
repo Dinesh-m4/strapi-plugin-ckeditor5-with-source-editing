@@ -115,6 +115,15 @@ const Editor = ({ onChange, name, value, config }) => {
         data={value}
         onReady={(editor) => {
           editor.setData(value);
+          editor.model.schema.register("script", {
+            allowWhere: "$block",
+            allowContentOf: "$block",
+            isBlock: true,
+          });
+          editor.conversion.elementToElement({
+            model: "script",
+            view: "script",
+          });
         }}
         onChange={(event, editor) => {
           const data = editor.getData();
