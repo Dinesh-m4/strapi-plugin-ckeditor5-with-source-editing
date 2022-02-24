@@ -69,8 +69,6 @@ import TableToolbar from "@ckeditor/ckeditor5-table/src/tabletoolbar.js";
 import TextTransformation from "@ckeditor/ckeditor5-typing/src/texttransformation.js";
 import TodoList from "@ckeditor/ckeditor5-list/src/todolist";
 import Underline from "@ckeditor/ckeditor5-basic-styles/src/underline.js";
-import { StrapiUploadAdapter } from "@gtomato/ckeditor5-strapi-upload-plugin";
-import { StrapiMediaLib } from "./strapi-medialib-plugin";
 import FullScreen from "./fullscreen-plugin";
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -143,8 +141,6 @@ ClassicEditor.builtinPlugins = [
   TextTransformation,
   TodoList,
   Underline,
-  StrapiUploadAdapter,
-  StrapiMediaLib,
   FullScreen,
 ];
 
