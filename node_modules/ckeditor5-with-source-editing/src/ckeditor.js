@@ -274,6 +274,8 @@ ClassicEditor.defaultConfig = {
       };
     },
   },
+  mediaEmbed: { previewsInData: true },
+
   htmlSupport: {
     allow: [
       {
